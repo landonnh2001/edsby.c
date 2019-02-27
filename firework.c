@@ -16,8 +16,19 @@ void loop() {
   }
     for(int i=0;i<70;i++){
         leds[i] = CRGB::Green;
-         FastLED.show();
+        FastLED.show();
         delay(30);
         leds[i] = CRGB::Black;
     }
+  void rainbow() 
+{
+ 
+  fill_rainbow( leds, NUM_LEDS, gHue, 7);
+}
+
+void rainbowWithGlitter() 
+{
+  rainbow();
+  addGlitter(80);
+}
 }
